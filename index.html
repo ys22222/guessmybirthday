@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재미있는 퀴즈 게임</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        #question {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        #options {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 1em;
+        }
+
+        button {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>재미있는 퀴즈 게임</h1>
+    </header>
+
+    <section>
+        <img src = "골든벨.jpg"
+        <div id="question">질문: 예성이의 생일은 언제일까요??</div>
+        <div id="options">
+            <button onclick="checkAnswer('may13th')">5월 13일</button>
+            <button onclick="checkAnswer('may14th')">5월 14일</button>
+            <button onclick="checkAnswer('may15th')">5월 15일</button>
+            <button onclick="checkAnswer('may16th')">5월 16일</button>
+        </div>
+        <p id="result"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 재미있는 퀴즈 게임. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'may14th') {
+                document.getElementById('result').innerText = '정답입니다! 👏';
+            } else {
+                document.getElementById('result').innerText = '틀렸습니다. 실망이군요.😢';
+            }
+        }
+    </script>
+</body>
+
+</html>
